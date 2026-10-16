@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17152f">
+  <meta name="description" content="A little birthday surprise made just for you.">
+  <title>A Little Birthday Surprise ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Birthday surprise home"><span class="brand-mark">✦</span> a little surprise</a>
+    <div class="top-actions">
+      <button class="music-button" id="musicToggle" type="button" aria-pressed="false"><span id="musicIcon">♫</span><span id="musicLabel">Play a tune</span></button>
+      <button class="icon-button" id="openSettings" type="button" aria-label="Customize website" title="Customize">⚙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sparkle">✧</span> MADE WITH LOVE, JUST FOR YOU <span class="sparkle">✧</span></p>
+        <h1>Happy Birthday,<br><em id="heroName">Bestie</em><span class="pink-dot">.</span></h1>
+        <p class="hero-subtitle" id="heroMessage">Life is a little brighter, louder, and a whole lot better with you in it.</p>
+        <div class="hero-buttons">
+          <button class="button button-primary" id="openGiftTop" type="button">Open your surprise <span>↗</span></button>
+          <a class="button button-quiet" href="#letter">A little note for you ↓</a>
+        </div>
+        <div class="tiny-note"><span class="tiny-heart">♡</span> best friends are life's favorite plot twist</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a birthday gift">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="star star-a">✦</div><div class="star star-b">✧</div><div class="star star-c">✦</div>
+        <div class="gift-shadow"></div>
+        <button class="gift gift-hero" id="heroGift" type="button" aria-label="Open the birthday gift">
+          <span class="gift-lid"><span class="bow"></span></span>
+          <span class="gift-box"><span class="gift-ribbon"></span><span class="gift-heart">♡</span></span>
+          <span class="gift-tag">for my<br>favorite human</span>
+        </button>
+        <p class="art-caption">psst… tap the gift <span>♡</span></p>
+      </div>
+      <a class="scroll-cue" href="#countdown">SCROLL TO THE MAGIC <span>↓</span></a>
+    </section>
+
+    <section class="countdown-section section" id="countdown">
+      <div class="section-heading">
+        <p class="eyebrow">THE BIG DAY</p>
+        <h2>Counting down to <em>you</em></h2>
+        <p class="section-description" id="countdownText">One more sleep until your day gets the spotlight.</p>
+      </div>
+      <div class="countdown-grid" aria-label="Countdown">
+        <div class="time-card"><strong id="days">00</strong><span>days</span></div>
+        <div class="time-card"><strong id="hours">00</strong><span>hours</span></div>
+        <div class="time-card"><strong id="minutes">00</strong><span>minutes</span></div>
+        <div class="time-card"><strong id="seconds">00</strong><span>seconds</span></div>
+      </div>
+      <p class="date-pill"><span>✧</span> <span id="dateLabel">17 October 2026</span> <span>✧</span></p>
+    </section>
+
+    <section class="surprise-section section" id="surprise">
+      <div class="section-heading">
+        <p class="eyebrow">A TINY BIT OF MAGIC</p>
+        <h2>There's a gift <em>for you</em></h2>
+        <p class="section-description">You deserve more than a message. You deserve a whole little moment.</p>
+      </div>
+      <div class="interactive-gift-wrap">
+        <div class="gift-glow"></div>
+        <button class="gift gift-interactive" id="mainGift" type="button" aria-label="Tap to open your birthday gift">
+          <span class="gift-lid"><span class="bow"></span></span>
+          <span class="gift-box"><span class="gift-ribbon"></span><span class="gift-heart">♡</span></span>
+          <span class="gift-tag">open me!</span>
+        </button>
+        <p class="gift-instruction" id="giftInstruction">Make a wish, then tap the gift 🎁</p>
+        <div class="gift-reveal" id="giftReveal" hidden>
+          <div class="reveal-icon">✧</div>
+          <h3>A whole year of good things!</h3>
+          <p>More laughter, more adventures, more late-night talks, and more reasons to be proud of yourself.</p>
+          <button class="text-button" id="letterButton" type="button">Read your little letter →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section section" id="letter">
+      <div class="letter-decoration decor-left">✿</div><div class="letter-decoration decor-right">✧</div>
+      <article class="letter-card">
+        <div class="letter-topline"><span>JUST BETWEEN US</span><span>♡</span></div>
+        <p class="letter-greeting">Dear <span id="letterName">Bestie</span>,</p>
+        <div class="letter-body" id="letterBody">
+          <p>Happy birthday to one of my favorite people in this entire world!</p>
+          <p>Thank you for the laughs that make absolutely no sense to anyone else, the conversations that somehow fix everything, and all the little moments that became big memories.</p>
+          <p>I hope this new chapter brings you peaceful days, exciting adventures, people who celebrate you properly, and every good thing you've been quietly wishing for.</p>
+          <p>No matter how busy life gets or how much things change, I hope you always remember how appreciated you are. The world is lucky to have you—and I'm extra lucky to call you my best friend.</p>
+          <p class="letter-signoff">Big hugs, always,<br><span>Your bestie ♡</span></p>
+        </div>
+        <div class="letter-footer"><span>made with a whole lot of love</span><span>✦ ✦ ✦</span></div>
+      </article>
+    </section>
+
+    <section class="final-section section" id="final">
+      <div class="final-stars" aria-hidden="true">✦　✧　✦　✧　✦</div>
+      <p class="eyebrow">ONE LAST THING…</p>
+      <h2>Make a wish,<br><em>birthday star.</em></h2>
+      <div class="cake" aria-label="Birthday cake illustration">
+        <div class="candles"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+        <div class="cake-top"></div><div class="cake-layer"></div><div class="cake-bottom"></div>
+        <div class="cake-icing"></div>
+      </div>
+      <p class="final-message" id="finalMessage">May your smile stay bright, your heart stay kind, and this year surprise you in the best possible ways.</p>
+      <button class="button button-primary wish-button" id="wishButton" type="button">Make a wish ✨</button>
+      <p class="wish-result" id="wishResult" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span> a little surprise</a>
+    <p>Designed with love for one very special human.</p>
+    <button class="footer-customize" id="footerSettings" type="button">Make it yours ⚙</button>
+  </footer>
+
+  <dialog id="settingsDialog" class="settings-dialog">
+    <form method="dialog" id="settingsForm">
+      <div class="dialog-heading"><div><p class="eyebrow">YOUR PERSONAL TOUCH</p><h2>Make it <em>theirs</em></h2></div><button class="icon-button close-dialog" aria-label="Close customization" value="cancel">×</button></div>
+      <label for="friendName">Their name or nickname</label>
+      <input id="friendName" name="friendName" maxlength="40" placeholder="e.g. Bestie">
+      <label for="birthdayDate">Birthday date</label>
+      <input id="birthdayDate" name="birthdayDate" type="date" value="2026-10-17">
+      <label for="customMessage">Short message for the homepage</label>
+      <textarea id="customMessage" name="customMessage" rows="3" maxlength="180" placeholder="A little message from you…"></textarea>
+      <label for="signature">Sign the letter as</label>
+      <input id="signature" name="signature" maxlength="40" placeholder="Your bestie">
+      <p class="settings-hint">Changes are saved only in this browser on this device. Edit the text in <code>script.js</code> for permanent changes before sharing.</p>
+      <div class="dialog-actions"><button class="button button-quiet" value="cancel">Cancel</button><button class="button button-primary" id="saveSettings" value="save">Save changes ✓</button></div>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
